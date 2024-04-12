@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event ET - Book Events and Activities</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      header,
+      footer {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .container {
+        background-color: transparent;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 90%;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .container:hover {
+        transform: translateY(-5px);
+      }
+
+      .faq-container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 90%;
+        margin: 20px auto;
+        text-align: left;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        height: auto;
+        transition: height 0.3s ease;
+      }
+
+      .faq-container.closed {
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+
+      .faq-answer {
+        display: none;
+        margin-bottom: 10px;
+      }
+
+      .faq-question.active .faq-answer {
+        display: block;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      h2 {
+        color: #444;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #0056b3;
+      }
+
+      footer {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+      }
+
+      footer nav a {
+        text-decoration: none;
+        color: #555;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+
+      footer nav a:hover {
+        color: #007bff;
+      }
+
+      footer::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header style="background-color: #007bff00; color: #fff; padding: 20px 0">
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <a
+          href="index.html"
+          style="
+            text-decoration: none;
+            display: inline-block;
+            padding-right: 20px;
+          "
+        >
+          <img
+            src="logo.png"
+            alt="Events ET"
+            style="max-width: 100px; max-height: 50px"
+          />
+        </a>
+        <nav>
+          <ul
+            style="
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <li style="margin-right: 20px">
+              <a
+                href="index.html"
+                style="text-decoration: none; color: #fff; font-size: 20px"
+                >Home</a
+              >
+            </li>
+            <li style="margin-right: 20px">
+              <a
+                href="AboutUs.html"
+                style="text-decoration: none; color: #fff; font-size: 20px"
+                >About</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="container"
+      style="
+        background-color: transparent;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(248, 248, 248, 0.515);
+        max-width: 90%;
+        margin: 20px auto;
+        text-align: center;
+        transition: transform 0.3s ease;
+        font-family: 'sans-serif', Arial, sans-serif;
+      "
+    >
+      <div
+        class="container"
+        style="
+          background-color: transparent;
+          color: #ffffff;
+          padding: 20px;
+          max-width: 90%;
+          margin: 20px auto;
+          text-align: center;
+          transition: transform 0.3s ease;
+          font-family: 'sans-serif', Arial, sans-serif;
+        "
+      >
+        <h2 style="color: rgb(255, 255, 255)">About Us</h2>
+      </div>
+      <!-- 1 -->
+      <div
+        class="container"
+        style="
+          background-color: transparent;
+          color: #ffffff;
+          padding: 20px;
+          border-radius: 30px;
+          box-shadow: 0 0 20px rgba(248, 248, 248, 0.515);
+          max-width: 90%;
+          margin: 20px auto;
+          text-align: center;
+          transition: transform 0.3s ease;
+          font-family: 'sans-serif', Arial, sans-serif;
+        "
+      >
+        <p
+          style="color: rgb(255, 255, 255); font-size: 30px; font-weight: bold"
+        >
+          Welcome to Events Et – your premier destination for effortless event
+          ticketing! At Events Et, we pride ourselves on delivering a seamless
+          ticket booking experience that transforms the way you engage with live
+          events.
+        </p>
+        <div style="display: flex; justify-content: center">
+          <video
+            autoplay
+            muted
+            loop
+            style="max-width: 100%; height: auto; border-radius: 30px"
+          >
+            <source src="HIKING.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div
+        class="container"
+        style="
+          background-color: transparent;
+          color: #ffffff;
+          padding: 20px;
+          border-radius: 30px;
+          box-shadow: 0 0 20px rgba(248, 248, 248, 0.515);
+          max-width: 90%;
+          margin: 20px auto;
+          text-align: center;
+          transition: transform 0.3s ease;
+          font-family: 'sans-serif', Arial, sans-serif;
+        "
+      >
+        <p style="color: rgb(255, 255, 255); font-size: 20px">
+          As passionate event enthusiasts ourselves, we understand the thrill of
+          discovering and attending the perfect event. From vibrant music
+          festivals to adrenaline-pumping sports matches, and from thrilling
+          hiking trips to immersive cultural exhibitions, Events Et is your
+          trusted companion in the world of live entertainment. Our journey
+          began with a simple yet profound mission: to revolutionize the way
+          people access and experience events. With this goal in mind, we
+          embarked on a quest to develop a user-friendly app that empowers users
+          to effortlessly explore, book, and attend events of their choice,
+        </p>
+        <div style="display: flex; justify-content: center">
+          <img
+            src="onhand.jpg"
+            alt="Hiking Image"
+            style="max-width: 100%; height: auto; border-radius: 30px"
+          />
+        </div>
+      </div>
+      <!-- 3 -->
+      <div
+        class="container"
+        style="
+          background-color: transparent;
+          color: #ffffff;
+          padding: 20px;
+          border-radius: 30px;
+          box-shadow: 0 0 20px rgba(248, 248, 248, 0.515);
+          max-width: 90%;
+          margin: 20px auto;
+          text-align: center;
+          transition: transform 0.3s ease;
+          font-family: 'sans-serif', Arial, sans-serif;
+        "
+      >
+        <p style="color: rgb(255, 255, 255); font-size: 20px">
+          All from the palm of their hand. But Events Et is more than just a
+          ticketing platform. We're a community of event-goers, creators, and
+          enthusiasts united by our love for memorable experiences. Our platform
+          serves as a hub where like-minded individuals come together to share
+          their passion for events and discover new opportunities for connection
+          and enjoyment. What sets Events Et apart is our unwavering commitment
+          to innovation and customer satisfaction. We continuously strive to
+          enhance our platform,
+        </p>
+      </div>
+      <!-- 4 -->
+      <div
+        class="container"
+        style="
+          background-color: transparent;
+          color: #ffffff;
+          padding: 20px;
+          border-radius: 30px;
+          box-shadow: 0 0 20px rgba(248, 248, 248, 0.515);
+          max-width: 90%;
+          margin: 20px auto;
+          text-align: center;
+          transition: transform 0.3s ease;
+          font-family: 'sans-serif', Arial, sans-serif;
+        "
+      >
+        <p style="color: rgb(255, 255, 255); font-size: 20px">
+          Our dedication to innovation and customer satisfaction drives us to
+          constantly evolve and improve our platform, ensuring that every user's
+          experience with Events Et is seamless, enjoyable, and unforgettable.
+          Join us as we embark on this exciting journey of exploration,
+          connection, and celebration, because at Events Et, the thrill of
+          discovery awaits in every tap, swipe, and click.
+        </p>
+      </div>
+      <!-- 5 -->
+    </div>
+
+    <!--FAQ CONTAINER-->
+
+    <!-- Add more FAQ items here -->
+
+    <script>
+      function toggleAnswer(question) {
+        question.classList.toggle("active");
+      }
+
+      function toggleFAQ() {
+        var faqContainer = document.getElementById("faqContainer");
+        faqContainer.classList.toggle("closed");
+      }
+    </script>
+  </body>
+</html>

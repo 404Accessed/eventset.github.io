@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event ET - Book Events and Activities</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-gKiRxhkQzVB1+qDeVHYW9pe1JGwMpC29Sz7TikYaqzEcU1njPM5Vr2wXqVFd/qXRfA0Gc7ZVeBPt3EeU+iXTiA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      header,
+      footer {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .container {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 90%;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .container:hover {
+        transform: translateY(-5px);
+      }
+
+      .content {
+        flex: 1;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 90%;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      h2 {
+        color: #444;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #007bff;
+      }
+
+      footer {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+      }
+
+      footer nav a {
+        text-decoration: none;
+        color: #555;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+
+      footer nav a:hover {
+        color: #007bff;
+      }
+
+      footer::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html">
+          <img src="logo.png" alt="Events ET" />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="card">
+        <h1>Hello!</h1>
+        <p>
+          We're here to help. You can provide feedback and suggestions through
+          our social media channels. Feel free to reach out to us on:
+        </p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/eventsetofficial/" target="_blank">
+            <img src="instagram_logo.png" alt="" width="50" height="50" />
+            Instagram
+          </a>
+          <a href="https://t.me/+90dFTYhbN0YzYWE0" target="_blank">
+            <img src="telegram_logo.png" alt="" width="50" height="50" />
+            Telegram
+          </a>
+          <!-- Add more social media links here -->
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <nav>
+        <a href="privacy_policy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </nav>
+    </footer>
+  </body>
+</html>
