@@ -163,6 +163,7 @@
                 <input type="password" id="password" placeholder="Enter your password" required>
                 <button class="btn" onclick="signIn()">- Click Me -</button>
             </div>
+
             <div id="qr-code-container" style="display: none; color: white; text-align: center;">
                 <p>Welcome, <span id="user-name"></span></p>
                 <p>Your QR Code:</p>
@@ -171,6 +172,65 @@
 
         </div>
     </div>
+
+
+
+    <style>
+        /* Container for input fields and button */
+        #login-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            /* Center-align horizontally */
+            align-items: center;
+            /* Center-align vertically */
+        }
+
+        /* Input fields */
+        #login-form input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 20px);
+            /* Default width for small screens */
+            max-width: 300px;
+            /* Limit maximum width on larger screens */
+        }
+
+        /* Button */
+        #login-form .btn {
+            width: calc(100% - 20px);
+            /* Default button width for small screens */
+            max-width: 300px;
+            /* Aligns with input width */
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            #login-form {
+                flex-direction: row;
+                /* Align horizontally */
+            }
+
+            #login-form input,
+            #login-form .btn {
+                width: auto;
+                /* Adjust width to fit content */
+                flex: 1;
+                /* Make inputs and button equally flexible */
+            }
+
+            #login-form .btn {
+                flex-basis: auto;
+                /* Adjust button's base size */
+            }
+        }
+    </style>
+
+
+
 
     <footer class="container-fluid footer_section">
         <div class="container">
